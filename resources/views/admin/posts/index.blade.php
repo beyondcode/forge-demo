@@ -7,7 +7,7 @@
 
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header">Posts</div>
+                    <div class="card-header">My Posts</div>
                     <div class="card-body">
                         <a href="{{ url('/admin/posts/create') }}" class="btn btn-success btn-sm" title="Add New Post">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
