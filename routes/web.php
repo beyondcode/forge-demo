@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect()->to('/posts');
+    return redirect()->to('/admin/posts');
 });
 
-Route::resource('posts', 'Admin\\PostsController');
+Route::resource('admin/posts', 'Admin\\PostsController');
