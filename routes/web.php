@@ -15,4 +15,10 @@ Route::get('/', function () {
     return redirect()->to('/admin/posts');
 });
 
+Route::get('/log', function () {
+    Log::info('This is an info log.');
+    Log::warning('This is a warning.');
+    Log::error('This is an error.');
+});
+
 Route::resource('admin/posts', 'Admin\\PostsController');
