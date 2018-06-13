@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/queue', function () {
 	for ($i = 0; $i < rand(10,30); $i++) {
-		dispatch(HorizonDemo::class);
+		dispatch(new HorizonDemo()));
 	}
 });
 
