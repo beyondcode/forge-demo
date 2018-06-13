@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 Route::get('/log', function () {
     Log::info('This is an info log.');
+    
     Log::warning('This is a warning.');
+
     Log::error('This is an error.');
 });
 
