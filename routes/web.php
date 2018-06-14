@@ -11,6 +11,7 @@
 |
 */
 
+// Some changes
 Route::get('/', function () {
     return redirect()->to('/admin/posts');
 });
