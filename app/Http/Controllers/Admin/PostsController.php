@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests;
+use App\Jobs\PostCreated;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -55,6 +55,8 @@ class PostsController extends Controller
         $requestData = $request->all();
         
         Post::create($requestData);
+
+        dispatch(new PostCreated);
 
         return redirect('admin/posts')->with('flash_message', 'Post added!');
     }
